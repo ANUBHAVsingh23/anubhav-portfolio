@@ -1,0 +1,7 @@
+Place your profile photo in this folder.
+
+Recommended filename : profile.jpg  (or .png / .webp)
+Recommended size     : 800 × 1000 px (4:5 ratio)
+
+After adding your photo, see the README.md "Add a Profile Photo" section
+for instructions on how to hardcode it into the site.

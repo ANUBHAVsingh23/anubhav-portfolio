@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Anubhav Singh – Full-Stack Developer & IoT Enthusiast. Portfolio showcasing projects, skills, and certifications." />
+  <meta name="author" content="Anubhav Singh" />
+  <title>Anubhav Singh – Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo">AS.</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-tag">Available for opportunities</div>
+    <h1 class="hero-name">
+      <span>Anubhav</span>
+      <span class="last">Singh</span>
+    </h1>
+    <p class="hero-subtitle">
+      Full-stack developer &amp; IoT enthusiast crafting end-to-end solutions —
+      from web apps and data visualizations to smart embedded systems.
+    </p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">View Projects ↗</a>
+      <a href="mailto:singh.anubhav3945@gmail.com" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+    <div class="hero-badges">
+      <div class="badge">MCA @ LPU</div>
+      <div class="badge">IoT Builder</div>
+      <div class="badge">IBM Certified</div>
+      <div class="badge">Open to Work</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Who I Am</h2>
+
+    <div class="about-grid-new">
+
+      <!-- Profile Photo -->
+      <div class="reveal" style="position:relative;">
+        <div class="profile-frame">
+          <div class="profile-img-wrap"
+               id="profileImgWrap"
+               onclick="document.getElementById('profileInput').click()">
+            <div class="profile-placeholder" id="profilePlaceholder">
+              <div class="profile-placeholder-icon">👤</div>
+              <span>Click to upload<br>your photo</span>
+              <button class="profile-upload-btn" type="button">↑ Upload Image</button>
+            </div>
+            <img id="profileImg" src="" alt="Anubhav Singh" style="display:none;" />
+          </div>
+          <button class="profile-remove"
+                  id="profileRemove"
+                  title="Remove photo"
+                  onclick="removePhoto(event)">✕</button>
+        </div>
+        <!-- Hidden file input -->
+        <input type="file" id="profileInput" accept="image/*" onchange="loadPhoto(event)" />
+
+        <div style="text-align:center; margin-top:16px; font-size:0.65rem;
+                    letter-spacing:0.1em; color:var(--muted); text-transform:uppercase;">
+          Anubhav Singh<br>
+          <span style="color:var(--accent); font-size:0.6rem;">Full-Stack Developer</span>
+        </div>
+      </div>
+
+      <!-- Bio + Stats -->
+      <div>
+        <div class="about-text reveal">
+          <p>I'm <strong>Anubhav Singh</strong>, a passionate developer from
+             <strong>Jaunpur, Uttar Pradesh</strong>. Currently pursuing my MCA at
+             Lovely Professional University, I bring a strong foundation from my BCA
+             (CGPA&nbsp;8.06) and a drive to build things that matter.</p>
+          <p>I love working across the stack — whether it's spinning up a full-stack
+             PHP web app, building real-time IoT systems with MQTT, or crunching data
+             with Python. I believe the best code is simple, purposeful, and solves
+             real problems.</p>
+          <p>When I'm not coding, I'm learning — currently diving deeper into DevOps
+             and cloud infrastructure to round out my engineering skills.</p>
+        </div>
+
+        <div class="about-stats reveal" style="margin-top:40px;">
+          <div class="stat-box">
+            <div class="stat-num">8.06</div>
+            <div class="stat-label">BCA CGPA</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">7</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Years Coding</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-label">Skills</div>
+    <h2 class="section-title">Tech Stack</h2>
+
+    <div class="skills-container">
+      <div class="reveal">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-pills">
+          <span class="pill lang">C++</span>
+          <span class="pill lang">Java</span>
+          <span class="pill lang">Python</span>
+          <span class="pill lang">PHP</span>
+          <span class="pill lang">SQL</span>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="skill-group-label">Technologies &amp; Tools</div>
+        <div class="skill-pills">
+          <span class="pill tech">Node.js</span>
+          <span class="pill tech">Git</span>
+          <span class="pill tech">GitHub</span>
+          <span class="pill tech">MySQL</span>
+          <span class="pill tech">MQTT</span>
+          <span class="pill tech">Blynk</span>
+          <span class="pill tech">Ubuntu</span>
+          <span class="pill tech">IoT Sensors</span>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="skill-group-label">Soft Skills</div>
+        <div class="skill-pills">
+          <span class="pill soft">Problem-Solving</span>
+          <span class="pill soft">Responsive Web Design</span>
+          <span class="pill soft">Team Collaboration</span>
+          <span class="pill soft">Continuous Learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-label">Work</div>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-num">01 — CAPSTONE</div>
+        <h3 class="project-title">Social Media Impact Analysis</h3>
+        <div class="project-date">Jul 2022 – Aug 2022</div>
+        <ul class="project-desc">
+          <li>Built website with real-time survey collection</li>
+          <li>Data visualization dashboard for impact insights</li>
+          <li>Integrated AI chatbot for user interaction</li>
+          <li>End-to-end feedback loop system</li>
+        </ul>
+        <a href="https://github.com/ANUBHAVsingh23/Capstone-Project"
+           target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">02 — FULL-STACK</div>
+        <h3 class="project-title">Car &amp; Bike Rental Service</h3>
+        <div class="project-date">Feb 2021 – Mar 2023</div>
+        <ul class="project-desc">
+          <li>Full-stack web application using PHP &amp; MySQL</li>
+          <li>Complete booking and rental management system</li>
+          <li>User authentication and admin dashboard</li>
+          <li>Responsive design for all devices</li>
+        </ul>
+        <a href="https://github.com/ANUBHAVsingh23/Car-and-Bike-rental-Service"
+           target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">03 — IOT</div>
+        <h3 class="project-title">Smart Dustbin IoT Project</h3>
+        <div class="project-date">Oct 2024 – Dec 2024</div>
+        <ul class="project-desc">
+          <li>Automated waste segregation with sensors &amp; servos</li>
+          <li>Real-time monitoring via Blynk &amp; MQTT protocols</li>
+          <li>Embedded hardware-software integration</li>
+          <li>Remote dashboard for waste level tracking</li>
+        </ul>
+        <a href="https://github.com/ANUBHAVsingh23/IOT-Project"
+           target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CERTIFICATIONS
+  ══════════════════════════════════════════ -->
+  <section id="certifications">
+    <div class="section-label">Learning</div>
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="certs-grid">
+      <div class="cert-card reveal">
+        <div class="cert-issuer">IBM · Coursera</div>
+        <div class="cert-name">Data Science Professional</div>
+        <div class="cert-date">July 2024</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-issuer">Coursera</div>
+        <div class="cert-name">Python Data Products</div>
+        <div class="cert-date">January 2025</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-issuer">IBM</div>
+        <div class="cert-name">Introduction to DevOps</div>
+        <div class="cert-date">April 2025</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-issuer">Microsoft</div>
+        <div class="cert-name">SQL Foundations</div>
+        <div class="cert-date">August 2025</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-issuer">IBM</div>
+        <div class="cert-name">Cybersecurity Tools &amp; Cyber Attacks</div>
+        <div class="cert-date">April 2024</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-issuer">Cisco</div>
+        <div class="cert-name">Packet Tracer Networking</div>
+        <div class="cert-date">April 2023</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-issuer">Udemy</div>
+        <div class="cert-name">Web Development Bootcamp</div>
+        <div class="cert-date">July 2024</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       EDUCATION
+  ══════════════════════════════════════════ -->
+  <section id="education">
+    <div class="section-label">Education</div>
+    <h2 class="section-title">Academic Journey</h2>
+
+    <div class="edu-timeline">
+      <div class="edu-item reveal">
+        <div class="edu-year">2025 – 2027</div>
+        <div class="edu-degree">Master of Computer Applications (MCA)</div>
+        <div class="edu-inst">Lovely Professional University</div>
+        <div class="edu-grade">CGPA: 7.4</div>
+      </div>
+      <div class="edu-item reveal">
+        <div class="edu-year">2022 – 2025</div>
+        <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+        <div class="edu-inst">Lovely Professional University</div>
+        <div class="edu-grade">CGPA: 8.06</div>
+      </div>
+      <div class="edu-item reveal">
+        <div class="edu-year">12th Grade</div>
+        <div class="edu-degree">Senior Secondary — Mathematics</div>
+        <div class="edu-inst">Jaunpur, Uttar Pradesh</div>
+        <div class="edu-grade">72%</div>
+      </div>
+      <div class="edu-item reveal">
+        <div class="edu-year">10th Grade</div>
+        <div class="edu-degree">Secondary — Science</div>
+        <div class="edu-inst">Jaunpur, Uttar Pradesh</div>
+        <div class="edu-grade">80%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <div class="contact-layout">
+
+      <div>
+        <div class="contact-big">Let's <span>build</span><br>something<br>together.</div>
+        <p class="contact-text">
+          I'm actively looking for opportunities — whether it's a full-time role,
+          internship, or an exciting side project. My inbox is always open.
+        </p>
+        <a href="mailto:singh.anubhav3945@gmail.com" class="btn-primary">Send Email ↗</a>
+      </div>
+
+      <div class="contact-links reveal">
+        <a href="mailto:singh.anubhav3945@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          <div class="contact-link-info">
+            <div class="contact-link-type">Email</div>
+            <div class="contact-link-val">singh.anubhav3945@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+917380718141" class="contact-link">
+          <div class="contact-link-icon">☎</div>
+          <div class="contact-link-info">
+            <div class="contact-link-type">Phone</div>
+            <div class="contact-link-val">+91 7380718141</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/anubhav-singh-oa38a6256/"
+           target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          <div class="contact-link-info">
+            <div class="contact-link-type">LinkedIn</div>
+            <div class="contact-link-val">anubhav-singh-oa38a6256</div>
+          </div>
+        </a>
+        <a href="https://github.com/ANUBHAVsingh23"
+           target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">⌥</div>
+          <div class="contact-link-info">
+            <div class="contact-link-type">GitHub</div>
+            <div class="contact-link-val">ANUBHAVsingh23</div>
+          </div>
+        </a>
+        <div class="contact-link" style="cursor:default;">
+          <div class="contact-link-icon">📍</div>
+          <div class="contact-link-info">
+            <div class="contact-link-type">Location</div>
+            <div class="contact-link-val">Jaunpur, Uttar Pradesh – 222202</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <span>© 2025 Anubhav Singh</span>
+    <span>Built with precision. Deployed with pride.</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
